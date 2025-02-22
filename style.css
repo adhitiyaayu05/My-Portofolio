@@ -94,29 +94,32 @@ section {
     padding: 5rem 9% 5rem;
 }
 
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
 .home {
+    margin-top: 6%;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    margin-top: 0 !important;
     gap: 8rem !important;
-    background-image: url(img/bground2.jpg) !important;
+    background:rgba(255, 255, 255, 0.507) !important;
 }
 
-.home .home-content h1 {
-    margin-top: 60px;
-    font-size: 5rem;
-    font-weight: 600;
-    line-height: 1.3;
+.home .home-content h1{
+font-size: 5rem;
+font-weight: 600;
+line-height: 1.3;
 }
-
 
 span {
     color: #aba292;
 }
 
 .home-content h3 {
-    font-size: 3rem;
+    font-size:3rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -125,165 +128,168 @@ span {
     border-radius: 35%;
 }
 
-.home-img img {
-    margin-bottom: 10px;
-    position: relative !important;
+.home-img img{
+    margin-bottom: 27px;
+    position: relative;
     width: 30vw;
+    /* height: 45vw; */
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
+    box-shadow: 0 0 25px var(--bg-color);
     cursor: pointer;
     transition: 0.2s linear;
+}  
+
+.home-img img:hover{
+transform: scale(1.01);
+filter: dropshadow(0 0 25px var(--bg-color));
 }
 
-.home-img img:hover {
-    transform: scale(1.01) !important;
-    filter: dropshadow(0 0 25px var(--main-color)) !important;
+.home-content p{
+    margin-top: 5%;
+    font-size: 1.8rem;
 }
 
-.social-icon a {
+.social-icon a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     width: 4rem;
     height: 4rem;
     background: transparent;
     border: 0.2rem solid var(--bg-color);
-    font-size: 2rem;
+    /* Buat gedein icon sosial medianya */
+    font-size: 2rem;  
     border-radius: 50%;
-    color: #040404;
+    color: #0c0c0c;
     margin: 4rem 1.5rem 4rem 0;
     transition: 0.3s ease;
-}
-
-.social-icon a:hover {
-    color: #aba292;
-    transform: scale(1.3) translateY(-5px);
-    background: transparent;
-    box-shadow: 0 0 25px var(--main-color);
-}
-
-.btn {
-    display: inline-block !important;
-    padding: 1rem 2.8rem !important;
-    background: black !important;
-    border-radius: 4rem !important;
-    font-size: 1.6rem !important;
-    color: #fcfcfc !important;
-    border: 2px solid var(--main-color) !important;
-    letter-spacing: 0.1rem !important;
-    font-weight: 600 !important;
-    transition: 0.3s ease !important;
-    cursor: pointer !important;
-    margin: 0 1px !important;
-    display: block !important;
-    text-align: center !important;
-}
-
-.btn:hover {
-    transform: scale(1.03);
-    background-color: black;
-    color: #fff;
-    box-shadow: 0 0 25px var(--main-color);
-}
-
-.typing-text {
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-}
-
-.typing-text span {
-    position: relative;
-}
-
-.typing-text span::before {
-    content: 'Software Developer';
-    color: #aba292;
-    animation: words 20s infinite;
-}
-
-.typing-text span::after {
-    content: '';
-    background: transparent;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid rgb(108, 108, 108);
-    right: -8;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-    to {
-        border-left: 3px solid rgb(108, 108, 108);
     }
-}
-
-@keyframes words {
-    0%, 20% {
-        content: "Front End Developer";
+    
+    .social-icon a:hover {
+        /* margin-top: 20%;
+        margin-bottom: 20%; */
+        color: #0b0a0a;
+        transform: scale(1.3)translateY(-5px);
+        background:transparent;
+        box-shadow: 0 0 25px var(--bg-color);
+        
     }
-    21%, 40% {
-        content: "Software Enginer";
+    
+    .btn {
+        display: inline-block !important;
+        padding: 1rem 2.8rem !important;
+        background: #050505 !important;
+        border-radius: 4rem !important;
+        font-size: 1.6rem !important;
+        color: #fcf6f6 !important;
+        border: 2px solid var(--bg-color) !important;
+        letter-spacing: 0.1rem !important;
+        font-weight: 600 !important;
+        transition: 0.3s ease !important;
+        cursor: pointer !important;
     }
-    41%, 60% {
-        content: "Web Designer";
+    
+    .btn:hover {
+        transform: scale(1.03);
+        background-color: #f6f0f0;
+        color: #0d0d0d;
+        box-shadow: 0 0 25px var(--bg-color);
     }
-    61%, 80% {
-        content: "Wonder Women";
+    
+    .typing-text {
+        font-size: 34px;
+        font-weight: 600;
+        min-width: 280px;
     }
-    81%, 100% {
-        content: "Vice Leader";
+    .typing-text span {
+        position: relative;
     }
-}
-
-@keyframes typing {
-    10%, 15%,
-    30%, 35%,
-    50%, 55%,
-    70%, 75%,
-    90%, 95% {
-        width: 0;
+    
+    .typing-text span::before {
+     content: 'Software Developer';
+     color: #aba292;
+     animation: words 20s infinite;
     }
-    5%, 20%,
-    25%, 40%,
-    45%, 60%,
-    65%, 80%, 85% {
+    
+    .typing-text span::after {
+        content: '';
+        background: transparent;
+        position: absolute;
         width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid rgb(6, 5, 5);
+        right: -8;
+        animation: cursor 0.6s infinite, typing 20s steps(14) infinite; ;
     }
-}
-
-@media (max-width: 1000px) {
-    .home {
-        gap: 4rem;
+    
+    @keyframes cursor {
+        to{
+        border-left:3px solid rgb(15, 15, 15);
+        }
     }
-}
-
-@media (max-width: 995px) {
-    .home {
-        flex-direction: column;
-        margin: 5rem 4rem;
+    
+    @keyframes words {
+        0%, 20%{
+            content: "Web Developer";
+        }
+        21%, 40%{
+            content: "Developer";
+        }
+        41%, 60%{
+            content: "Web Designer";
+        }
+        61%, 80%{
+            content: "Wonder Woman";
+        }
+        81%, 100%{
+            content: "Software Division Leader";
+        }
     }
-
-    .home .home-content h3 {
+    
+    @keyframes typing {
+        10%, 15%,
+        30%, 35%,
+        50%, 55%,
+        70%, 75%,
+        90%, 95% {
+         width: 0;
+        }
+        5%, 20%,
+        25%, 40%,
+        45%, 60%,
+        65%, 80%, 85%{
+         width: calc(100% + 8px);
+        }
+     }
+    
+     @media(max-width: 1000px){
+        .home{
+            gap:4rem;
+        }
+    }
+    
+    @media(max-width: 995px){
+        .home{
+           flex-direction: column;
+           margin: 5rem 4rem;
+    
+        }
+    
+        .home .home-content h3{
         font-size: 2.5rem;
+        }
+    
+        .home-content h1{
+            font-size: 5rem;
+    
+        }
+    
+        .home-img img{
+            width: 70vw;
+            margin-top: 4rem;
+    
+        }
     }
-
-    .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .home-content p {
-        text-align: justify;
-        font-size: 1.3rem;
-    }
-
-    .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
-    }
-}
 
 /* Services Section */
 .services {
